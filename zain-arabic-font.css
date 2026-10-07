@@ -1,0 +1,60 @@
+/* ==========================================================================
+   THMANYAH & ARABIC BRAND FONT SYSTEM (عائلة خطوط ثمانية الرسمية للموقع)
+   ========================================================================== */
+
+@import url('thmanyah-font-family.css');
+
+/* Typography Variables Override for Arabic */
+:root {
+  --ff-thmanyah-display: 'Thmanyah Serif Display', 'Zain', serif;
+  --ff-thmanyah-serif-text: 'Thmanyah Serif Text', 'Zain', serif;
+  --ff-thmanyah-sans: 'Thmanyah Sans', 'Zain', sans-serif;
+
+  --ff-head: 'Thmanyah Serif Display', 'Zain', serif;
+  --ff-body: 'Thmanyah Sans', 'Zain', sans-serif;
+  --ff-base: 'Thmanyah Sans', 'Zain', sans-serif;
+}
+
+/* 1. Apply Thmanyah Sans to UI, navigation, buttons, and numbers by default */
+html[lang='ar'],
+html:not([lang='en']),
+body:not(.lang-en),
+[dir='rtl'] {
+  font-family: var(--ff-thmanyah-sans);
+}
+
+/* 2. Thmanyah Serif Display: للعناوين الكبيرة والبارزة */
+html[lang='ar'] h1, html[lang='ar'] h2, html[lang='ar'] h3, 
+html[lang='ar'] h4, html[lang='ar'] h5, html[lang='ar'] h6,
+[dir='rtl'] h1, [dir='rtl'] h2, [dir='rtl'] h3, 
+[dir='rtl'] h4, [dir='rtl'] h5, [dir='rtl'] h6,
+.sec-title, .hero-title, .v-card-title, .works-group-title,
+.modal-video-title, .featured-title, .about-title, .contact-title {
+  font-family: var(--ff-thmanyah-display) !important;
+}
+
+/* 3. Thmanyah Serif Text: للنصوص والسرد والاقتباسات */
+html[lang='ar'] p, [dir='rtl'] p,
+.about-quote, blockquote, .hero-desc, .sec-desc, .about-text,
+.director-bio, .modal-desc, .modal-story, .footer-tagline, .v-card-desc {
+  font-family: var(--ff-thmanyah-serif-text) !important;
+}
+
+/* 4. Thmanyah Sans: للواجهات والأزرار والتنقل والأرقام */
+body, #nav, .nav-logo, .nav-links, .nav-links a, .btn, .btn-solid, .btn-ghost,
+.filter-tab, .hero-badge, .sec-eyebrow, .stat-num, .h-stat-num, .stat-label,
+.modal-meta-label, .modal-meta-val, input, textarea, select, button,
+.footer-link, .footer-copy, .v-card-cat, .v-card-role, .v-card-meta {
+  font-family: var(--ff-thmanyah-sans) !important;
+}
+
+/* Exclusive Rule: The Name "عبدالرحمن القديمي" uses Zain Font */
+.hero-name,
+#hero-main-name,
+#hero-sub-name,
+#nav-brand-name,
+#footer-name,
+.f-author,
+.philosophy-signature-block h4 {
+  font-family: 'Zain', 'Alexandria', -apple-system, sans-serif !important;
+}
